@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import {useData} from './useData';
+import { useData } from './useData';
 
 export const useFecth = () => {
 
     const result = useData();
-    console.log(result);
     const isMounted = useRef(true);
-    const [stateData, setStateData] = useState({ loading: true, error: null, data: null });
+    const [stateData, setStateData] = useState({ loading: true, error: null, data: [] });
+
 
     useEffect(() => {
         return () => {
@@ -15,17 +15,13 @@ export const useFecth = () => {
     }, []);
 
     useEffect(() => {
-        fetch(result)
-            .then(resp => resp.json())
-            .then(data => {
-                if (isMounted.current) {
-                    setStateData({
-                        loading: false,
-                        error: null,
-                        data,
-                    });
-                }
+        if (isMounted.current) {
+            setStateData({
+                loading: false,
+                error: null,
+                data: result
             });
+        }
 
     }, [result]);
 
