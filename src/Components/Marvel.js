@@ -5,6 +5,7 @@ import '../index.css'
 export const Marvel = () => {
 
     const data = useFecth();
+    console.log(data);
 
     return (
         <>
