@@ -18,9 +18,7 @@ export const useData = () => {
                             id: info.id,
                             title: info.title,
                             description: info.description,
-                            images: info.thumbnail.path,
-                            size: '/portrait_incredible.',
-                            extension: info.thumbnail.extension,
+                            images: `${info.thumbnail.path}/portrait_incredible.jpg`,
 
                         }]
                     ));
