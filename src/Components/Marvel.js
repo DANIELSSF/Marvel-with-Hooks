@@ -1,11 +1,10 @@
 import React from 'react';
-import { useFecth } from '../Hooks/useFecth';
+import { MarvelComics } from './Comics/MarvelComics';
+
 import '../index.css'
 
 export const Marvel = () => {
 
-    const data = useFecth();
-    console.log(data);
 
     return (
         <>
@@ -40,6 +39,10 @@ export const Marvel = () => {
                     </div>
                 </div>
             </nav>
+            <div className='comicsItem'>
+                <MarvelComics />
+            </div>
+        
         </>
     )
 }
