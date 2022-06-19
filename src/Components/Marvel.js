@@ -9,12 +9,7 @@ export const Marvel = () => {
 
     return (
         <>
-            <div className='container'>
-                <MarvelNav />
-            </div>
-            <br/>
-            <br/>
-            <br/>
+            <MarvelNav />
             <div className='comicsItem'>
                 <MarvelComics />
             </div>

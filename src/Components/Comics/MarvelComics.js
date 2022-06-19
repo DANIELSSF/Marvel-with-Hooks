@@ -9,7 +9,7 @@ export const MarvelComics = () => {
 
     return (
         <>
-            {!loading && <p>loading...</p>}
+            {loading && <p>loading...</p>}
             <div className='container'>
                 <div className='row'>
                     {

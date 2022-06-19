@@ -2,10 +2,10 @@ import React from 'react';
 
 export const MarvelNav = () => {
     return (
-        <nav className="navbar navbar-dark  fixed-top">
+        <nav className="navbar navbar-dark ">
             <div className="container-fluid">
-                <a className="navbar-brand mx-auto marve" >
-                    <img src="https://tm.ibxk.com.br/2018/06/08/08172409055350.jpg?ims=1120x420" alt="" width="280" height="80"></img>
+                <a className="navbar-brand mx-auto" >
+                    <img src="https://tm.ibxk.com.br/2018/06/08/08172409055350.jpg?ims=1120x420" alt="" width="290" height="90"></img>
                 </a>
                 <button className="navbar-toggler navbar-to" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span className="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@ export const MarvelNav = () => {
                     </div>
                     <hr className='hr' />
                     <div className="offcanvas-body">
-                        <ul className="navbar-nav justify-content-end flex-grow-1 pe-3" >
+                        <ul className="navbar-nav justify-content-end flex-grow-1 pe-4" >
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" >Comics</a>
                             </li>
