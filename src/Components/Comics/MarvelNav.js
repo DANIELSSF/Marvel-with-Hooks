@@ -1,6 +1,16 @@
 import React from 'react';
+import { useDataSearch } from '../../Hooks/SearchIndexComcis/useDataSearch';
 
 export const MarvelNav = () => {
+
+    // const handleSearchComic = (e) => {
+    //     e.preventDefault();
+
+    //     if (handleSearchComic.trim().length > 2) {
+    //         useDataSearch(handleSearchComic);
+    //     }
+    // }
+
     return (
         <nav className="navbar navbar-dark ">
             <div className="container-fluid">
@@ -27,7 +37,12 @@ export const MarvelNav = () => {
                         </ul>
                         <br />
                         <form className="d-flex " role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search Comic..." aria-label="Search"></input>
+                            <input className="form-control me-2"
+                                type="search"
+                                placeholder="Search Comic..."
+                                aria-label="Search"
+                                autoComplete='off'
+                            ></input>
                             <button className="btn btn-outline-danger" type="submit">Searchs</button>
                         </form>
                     </div>
