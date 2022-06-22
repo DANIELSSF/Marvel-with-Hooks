@@ -11,9 +11,8 @@ export const Marvel = () => {
 
     const { loadingSearch } = useFetchSearch();
 
-    // const loading = useEffect(() => {
-    //     return ();
-    // }, [loadingSearch]);
+    useEffect(() => {
+    }, [loadingSearch]);
 
 
     return (
