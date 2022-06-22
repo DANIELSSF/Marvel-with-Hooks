@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDataSearch } from '../../Hooks/SearchIndexComcis/useDataSearch';
+import { useForm } from '../../Hooks/useForm';
 
 export const MarvelNav = () => {
 
-    // const handleSearchComic = (e) => {
-    //     e.preventDefault();
+    const [state, handleInputComic, reset] = useForm({
+        ip:''
+    });
 
-    //     if (handleSearchComic.trim().length > 2) {
-    //         useDataSearch(handleSearchComic);
-    //     }
-    // }
+    const {ip} = state;
+
+    const handleInput = (e) => {
+        e.preventDefault();
+
+        if (ip.trim().length < 2) {
+            return;
+        };
+        
+    }
+    useDataSearch(ip.trim());
 
     return (
         <nav className="navbar navbar-dark ">
@@ -36,12 +45,15 @@ export const MarvelNav = () => {
                             </li>
                         </ul>
                         <br />
-                        <form className="d-flex " role="search">
+                        <form className="d-flex " role="search" onSubmit={handleInput}>
                             <input className="form-control me-2"
                                 type="search"
                                 placeholder="Search Comic..."
                                 aria-label="Search"
                                 autoComplete='off'
+                                name='ip'
+                                onChange={handleInputComic}
+                                value={ip}
                             ></input>
                             <button className="btn btn-outline-danger" type="submit">Searchs</button>
                         </form>
