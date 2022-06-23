@@ -9,16 +9,17 @@ export const MarvelNav = () => {
     });
 
     const {ip} = state;
+    const name = ip.replace(" ","%20");
 
     const handleInput = (e) => {
         e.preventDefault();
 
-        if (ip.trim().length < 2) {
+        if (name.length < 2) {
             return;
         };
         
     }
-    useDataSearch(ip.trim());
+    useDataSearch(name);
 
     return (
         <nav className="navbar navbar-dark ">
