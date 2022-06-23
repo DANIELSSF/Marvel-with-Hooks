@@ -5,22 +5,16 @@ export const MarvelComicsItem = ({ title, images }) => {
 
     return (
         <>
-            <div className="card 
-                            col-5
-                            col-lg-2
-                            col-sm-4
-                            col-md-3
-                            ms-3
-                            me-3
-                            mb-3
-                            g-1
+            <div className='col'>
+                <div className="card 
                             border-danger
                             text-bg-dark 
                             cardComics "
-            >
-                <img src={images} className="card-img-" alt={title}></img>
-                <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+                >
+                    <img src={images} className="card-img-top" alt={title}></img>
+                    <div className="card-body">
+                        <h5 className="card-title">{title}</h5>
+                    </div>
                 </div>
             </div>
         </>
