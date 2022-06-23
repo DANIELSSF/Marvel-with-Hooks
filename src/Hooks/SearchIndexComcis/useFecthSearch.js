@@ -4,6 +4,7 @@ import { useDataSearch } from './useDataSearch';
 export const useFetchSearch = () => {
 
     const result = useDataSearch();
+
     const isMounted = useRef(true);
     const [stateData, setStateData] = useState({ loadingSearch: false, error: null, data: [] });
 
