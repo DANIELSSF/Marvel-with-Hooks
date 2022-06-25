@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
-import { useDataSearch } from '../../Hooks/SearchIndexComcis/useDataSearch';
+import { useData } from '../../Hooks/useData';
 import { useForm } from '../../Hooks/useForm';
 
-export const MarvelNav = () => {
+export const MarvelNav = ({ setStateMarvel }) => {
 
     const [state, handleInputComic, reset] = useForm({
-        ip:''
+        ip: ''
     });
 
-    const {ip} = state;
-    const name = ip.replace(" ","%20");
+    const { ip } = state;
+    const name = ip.replace(" ", "%20");
 
     const handleInput = (e) => {
         e.preventDefault();
 
+
         if (name.length < 2) {
             return;
         };
-        
+
+        setStateMarvel(name);
     }
-    useDataSearch(name);
 
     return (
         <nav className="navbar navbar-dark ">

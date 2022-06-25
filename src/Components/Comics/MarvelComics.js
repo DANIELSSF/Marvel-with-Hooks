@@ -2,8 +2,8 @@ import React from 'react'
 import { useFecth } from '../../Hooks/useFecth'
 import { MarvelComicsItem } from './MarvelComicsItem';
 
-export const MarvelComics = () => {
-    const { data, loading } = useFecth();
+export const MarvelComics = ({stateMarvel}) => {
+    const { data, loading } = useFecth(stateMarvel);
 
     return (
         <>
