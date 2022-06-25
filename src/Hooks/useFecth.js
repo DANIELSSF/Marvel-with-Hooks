@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useData } from './useData';
 
-export const useFecth = () => {
+export const useFecth = (stateMarvel) => {
 
-    const result = useData();
+    const result = useData(stateMarvel);
     const isMounted = useRef(true);
     const [stateData, setStateData] = useState({ loading: true, error: null, data: [] });
 
