@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useData } from '../../Hooks/useData';
 import { useForm } from '../../Hooks/useForm';
 
 export const MarvelNav = ({ setStateMarvel }) => {
