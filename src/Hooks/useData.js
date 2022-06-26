@@ -12,12 +12,14 @@ export const useData = (name) => {
     const [state, setState] = useState([]);
 
     useEffect(() => {
+        setState([]);
         fetch(url)
             .then(resp => resp.json())
             .then(datas => {
                 const { data } = datas;
                 const { results } = data;
                 results.map(info => {
+                    
                     setState(st => (
                         [...st, {
                             id: info.id,
