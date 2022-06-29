@@ -1,24 +1,27 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { Comic } from './cardComic/Comic'
 import { MarvelNav } from './Comics/MarvelNav'
 import { Marvel } from './Marvel'
 
 
 export const AppRoutes = () => {
+    
     return (
         <>
-            <BrowserRouter>
+            <div>
                 <MarvelNav />
-                <div>
-                    <Routes>
-                        <Route path='/' element={<Marvel />} />
+                <Routes>
+                    <Route path='/' element={<Marvel />} />
+                    <Route path='/comic/:id' element={<Comic />} />
 
-                        <Route path='*' element={<Marvel />} />
-                    </Routes>
-                </div>
+                    <Route path='/*' element={<Navigate to="/" />} />
 
 
-            </BrowserRouter>
+                </Routes>
+            </div>
+
+
 
         </>
     )
