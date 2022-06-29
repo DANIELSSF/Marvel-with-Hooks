@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { MarvelComics } from './Comics/MarvelComics';
-import { MarvelNav } from './Comics/MarvelNav';
+import { marvelContext } from './helpers/useContext';
+
 import '../index.css'
 
 export const Marvel = React.memo(() => {
 
-    const [stateMarvel, setStateMarvel] = useState('');
+    const { stateMarvel, setNavSearch } = useContext(marvelContext);
+    setNavSearch(true);
 
     return (
         <>
-            <MarvelNav setStateMarvel={setStateMarvel} />
             <div className='comicsItem'>
                 <MarvelComics stateMarvel={stateMarvel} />
             </div>
