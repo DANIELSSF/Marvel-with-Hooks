@@ -6,8 +6,7 @@ import '../index.css'
 
 export const Marvel = React.memo(() => {
 
-    const { stateMarvel, setNavSearch } = useContext(marvelContext);
-    setNavSearch(true);
+    const { stateMarvel } = useContext(marvelContext);
 
     return (
         <>
