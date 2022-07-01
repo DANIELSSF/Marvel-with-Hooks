@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
     background-color: #000000;
 }
@@ -12,6 +13,7 @@
 
 .comicsItem {
     background-color: #181717;
+    width: 100%;
 }
 
 .hr {
@@ -23,11 +25,171 @@
     border-width: 2px;
 }
 
+/* Comic Item Default */
 .text-bg-dark {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
-/* .card-img-top{
-    width: 170px;
-    height: 300px;
-} */
+
+a {
+    text-decoration: none;
+}
+
+.card-body h5 a {
+    color: white;
+    font-size: 16pt;
+    text-decoration: none;
+}
+
+h5:hover {
+    color: red;
+}
+
+/* Comic id */
+.comicid {
+    margin-top: 40px;
+    float: right;
+}
+
+.fontid {
+    font-size: 10px;
+}
+
+.infoId-p {
+    font-weight: bold;
+}
+
+.infoId-a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.infoId-Title {
+    font-size: 38pt;
+}
+
+
+/* card comic id */
+
+@media (min-width:1024px) {
+    .product-card {
+        background: transparent;
+        height: 540px;
+        margin: 2px;
+        position: relative;
+        left: 100px;
+        width: 350px;
+    }
+}
+@media (max-width:1024px) {
+    .product-card {
+        background: transparent;
+        height: 540px;
+        margin: 2px;
+        position: relative;
+        left: 10px;
+        width: 350px;
+    }
+    .text-center{
+        margin: 20px;
+    }
+    .text-start{
+        margin: 20px;
+    }
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 4px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 425px;
+    padding: 10px;
+    background: #670202;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 425px;
+    padding: 2px;
+    background: #670202;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+    background-color: black;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: red;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: red;
+    font-weight: 600;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.product-links a:hover {
+    color: red;
+}
+
+/* Spinner */
+
+.spinner {
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
