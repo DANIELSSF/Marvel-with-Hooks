@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { BrowserRouter, useLocation } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { AppRoutes } from './Components/AppRoutes'
-import { marvelContext } from './Components/helpers/useContext'
+import { marvelContext } from './helpers/useContext'
 
 export const MarvelApp = () => {
 
@@ -9,7 +9,7 @@ export const MarvelApp = () => {
 
   const [navSearch, setNavSearch] = useState(true);
 
-  
+
   return (
     <div >
       <BrowserRouter>
