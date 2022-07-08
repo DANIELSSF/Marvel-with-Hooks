@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import 'animate.css';
+import { ComicFav } from './ComicFav';
 
-export const MarvelComicsItem = ({ id, title, images }) => {
+export const MarvelComicsItem = ({ id, title, images, handleTodoAdd }) => {
+
 
     return (
         <>
@@ -18,12 +20,15 @@ export const MarvelComicsItem = ({ id, title, images }) => {
                             <figure>
                                 <img src={images} className="card-img-top " alt={title}></img>
                             </figure>
-                                <div className="card-body ">
-                                    <h5 className="card-title ">{title}</h5>
-                                </div>
+                            <div className="card-body ">
+                                <h5 className="card-title ">{title}</h5>
+                            </div>
                         </div>
                     </div>
                 </Link>
+                <ComicFav id={id}
+                    handleTodoAdd={handleTodoAdd}
+                />
             </div>
         </>
     )
