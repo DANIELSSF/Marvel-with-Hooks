@@ -8,7 +8,6 @@ export const Comic = () => {
 
   const { id } = useParams();
   const { data, loading } = useComicID(id);
-  console.log(data, loading);
 
   return (
     <>
