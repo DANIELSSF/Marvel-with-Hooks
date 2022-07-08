@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { MarvelComics } from './Comics/MarvelComics';
-import { marvelContext } from './helpers/useContext';
+import { marvelContext } from '../helpers/useContext';
 
 import '../index.css'
 
