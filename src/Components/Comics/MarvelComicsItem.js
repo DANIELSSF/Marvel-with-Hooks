@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import 'animate.css';
 import { ComicFav } from './ComicFav';
+
+import 'animate.css';
 
 export const MarvelComicsItem = ({ id, title, images, handleTodoAdd }) => {
 
@@ -36,6 +37,7 @@ export const MarvelComicsItem = ({ id, title, images, handleTodoAdd }) => {
 MarvelComicsItem.propTypes = {
     title: PropTypes.string.isRequired,
     images: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
+    handleTodoAdd: PropTypes.func.isRequired
 }
 
