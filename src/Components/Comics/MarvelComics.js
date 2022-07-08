@@ -1,9 +1,11 @@
 import React from 'react'
 import { useFecth } from '../../Hooks/SearchComics/useFecth'
+import { useTodoActions } from '../../Hooks/todoActions/useTodoActions';
 import { MarvelComicsItem } from './MarvelComicsItem';
 
-export const MarvelComics = ({stateMarvel}) => {
+export const MarvelComics = ({ stateMarvel }) => {
     const { data, loading } = useFecth(stateMarvel);
+    const [, handleTodoAdd] = useTodoActions();
 
     return (
         <>
@@ -19,7 +21,8 @@ export const MarvelComics = ({stateMarvel}) => {
                         data.map(datas => (
                             <MarvelComicsItem
                                 key={datas.id}
-                                {...datas} />
+                                {...datas}
+                                handleTodoAdd={handleTodoAdd} />
                         ))
                     }
                 </div>
