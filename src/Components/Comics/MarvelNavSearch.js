@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useLocation } from 'react-router-dom';
+import { marvelContext } from '../../helpers/useContext';
 import { useForm } from '../../Hooks/Forms/useForm';
-import { marvelContext } from '../helpers/useContext';
 
 export const MarvelNavSearch = () => {
 

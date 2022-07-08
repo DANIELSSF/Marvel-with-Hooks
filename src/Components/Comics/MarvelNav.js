@@ -25,7 +25,7 @@ export const MarvelNav = () => {
                                 <Link className="nav-link active" to='/'>Comics</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/favorites'>Favoritos</Link>
+                                <Link className="nav-link" to='/comic-fav'>Favoritos</Link>
                             </li>
                         </ul>
                         <br />
