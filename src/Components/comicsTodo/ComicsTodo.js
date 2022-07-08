@@ -1,29 +1,20 @@
-import React, { useEffect, useReducer } from 'react'
-import { todoReducer } from '../../helpers/todoReducer';
+import React from 'react'
+import { useTodoActions } from '../../Hooks/todoActions/useTodoActions';
+import { ComicTodoFav } from './ComicTodoFav';
 
-const init = () => {
-    return JSON.parse(localStorage.getItem('todoComic')) || [];
-}
 
 export const ComicsTodo = () => {
-    const [todoComic, dispatch] = useReducer(todoReducer, [], init);
 
-    useEffect(() => {
-        localStorage.setItem('todoComic', JSON.stringify(todoComic));
-    }, [todoComic]);
+    const [todoComic, , handleTodoRemoved] = useTodoActions();
 
-    const handleTodoAdd = (newComicTodo) => {
-        dispatch({
-            type: 'add',
-            payload: newComicTodo
-        });
-    };
+    return (
+        <>
+            <p>Cantidad de Comics Favoritos: {todoComic.length}</p>
 
-    const handleTodoRemoved = (todoId) => {
-        dispatch({
-            type: 'removed',
-            payload: todoId
-        });
-    };
+            <ComicTodoFav todoComic={todoComic}
+                handleTodoRemoved={handleTodoRemoved}
+            />
 
+        </>
+    )
 }
