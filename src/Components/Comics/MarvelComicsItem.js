@@ -24,12 +24,12 @@ export const MarvelComicsItem = ({ id, title, images, handleTodoAdd }) => {
                             <div className="card-body ">
                                 <h5 className="card-title ">{title}</h5>
                             </div>
+                            <ComicFav id={id}
+                                handleTodoAdd={handleTodoAdd}
+                            />
                         </div>
                     </div>
                 </Link>
-                <ComicFav id={id}
-                    handleTodoAdd={handleTodoAdd}
-                />
             </div>
         </>
     )
