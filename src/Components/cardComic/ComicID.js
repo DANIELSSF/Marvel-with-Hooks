@@ -25,7 +25,7 @@ export const ComicID = ({ data }) => {
                     <p className='infoId-p text-start'> Cantidad de Páginas: <a className='infoId-a'>{page}</a> </p>
                     <p className='infoId-p text-start'>Fecha de Publicación: <a className='infoId-a'>{date}</a> </p>
                     <p className='infoId-p text-start'>Series:</p>
-                    <li className='text-center'>{series}.</li>
+                    <li className='text-center'>{series}</li>
                 </div>
             </div>
         </>
