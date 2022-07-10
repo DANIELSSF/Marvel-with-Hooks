@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
 
 export const ComicFav = ({ id, handleTodoAdd }) => {
 
@@ -14,15 +15,16 @@ export const ComicFav = ({ id, handleTodoAdd }) => {
     }
 
     return (
-        <form className='product-links'
-            onSubmit={handleAdd}>
-            <button className='fa-solid fa-heart'
-                type='submit'
-            ></button >
-        </form>
+        <>
+            <form className='product-link'>
+                <i className='fa-solid fa-heart'
+                    type='submit'
+                    onClick={handleAdd}
+                />
+            </form >
+        </>
     )
 }
 ComicFav.propTypes = {
-    id: PropTypes.number.isRequired,
-    handleAdd: PropTypes.func.isRequired
+    id: PropTypes.number.isRequired
 }
