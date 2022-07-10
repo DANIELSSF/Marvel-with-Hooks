@@ -1,35 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { useComicID } from '../../Hooks/ComicID/useComicID';
+
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 export const ComicTodoItem = React.memo(({ todoComics, handleTodoRemoved }) => {
 
     const { id } = todoComics;
     const { data } = useComicID(id);
-    const { title, image, format } = data;
+    const { title, image } = data;
 
 
     return (
         <>
-            <div className='product-card'>
-                <div className='badge'>{format}</div>
-                <div className='product-tumb'>
-                    <img src={image} />
-                </div>
-                <div className='product-details'>
-                    <div className='product-bottom-details'>
-                        <div className='product-price'>{title}</div>
-                        <div className='product-links'>
-                            <button className='fa-solid fa-heart-circle-xmark'
-                                onClick={() => handleTodoRemoved(id)}></button>
+            <Col>
+                <Card bg='black'
+                    border="danger"
+                    className='comicFav'>
+                    <Link to={`/comic/${id}`}>
+                        <Card.Img src={image} />
+                        <div className='title-Comic-Fav'>
+                            <Card.Body>
+                                <Card.Title >{title}</Card.Title>
+                            </Card.Body>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </Link>
+                    <Card.Body>
+                        <Card.Link >
+                            <div className='product-link'>
+                            <i className='fa-solid fa-heart-circle-minus'
+                                type='submit'
+                                onClick={() => handleTodoRemoved(id)}
+                            />
+                            </div>
+                        </Card.Link>
+                    </Card.Body>
+                </Card>
+            </Col>
         </>
     )
 })
 ComicTodoItem.propTypes = {
-    todoComics: PropTypes.array.isRequired,
     handleTodoRemoved: PropTypes.func.isRequired
 }
