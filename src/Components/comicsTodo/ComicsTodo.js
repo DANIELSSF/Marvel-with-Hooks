@@ -9,11 +9,13 @@ export const ComicsTodo = () => {
 
     return (
         <>
-            <p>Cantidad de Comics Favoritos: {todoComic.length}</p>
+            < div className='container'>
+                <h1 className='text-center'>Cantidad de Comics Favoritos: {todoComic.length}</h1>
 
-            <ComicTodoFav todoComic={todoComic}
-                handleTodoRemoved={handleTodoRemoved}
-            />
+                <ComicTodoFav todoComic={todoComic}
+                    handleTodoRemoved={handleTodoRemoved}
+                />
+            </div>
 
         </>
     )
