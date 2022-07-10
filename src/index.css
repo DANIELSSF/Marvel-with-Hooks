@@ -45,10 +45,20 @@ h5:hover {
     color: red;
 }
 
+.fa-heart {
+    color: white;
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+
+
 /* Comic id */
 .comicid {
-    margin-top: 40px;
-    float: right;
+    margin-top: 20px;
+    float: center;
 }
 
 .fontid {
@@ -75,29 +85,84 @@ h5:hover {
 @media (min-width:1024px) {
     .product-card {
         background: transparent;
-        height: 540px;
+        height: 550px;
         margin: 2px;
         position: relative;
         left: 100px;
         width: 350px;
+        float: right;
+    }
+
+    .text-center {
+        margin: 20px;
+        margin-left: 40px;
+    }
+
+    .text-start {
+        margin: 25px;
     }
 }
-@media (max-width:1024px) {
+
+@media (min-width:768px) {
     .product-card {
         background: transparent;
         height: 540px;
         margin: 2px;
         position: relative;
-        left: 10px;
+        left: 4px;
         width: 350px;
     }
-    .text-center{
+
+    .text-center {
         margin: 20px;
+        margin-left: 80px;
     }
-    .text-start{
-        margin: 20px;
+
+    .text-start {
+        margin: 25px;
+        margin-left: 80px;
     }
 }
+
+@media (min-width:375px) {
+    .product-card {
+        background: transparent;
+        height: 540px;
+        margin: 4px;
+        position: relative;
+        left: 4px;
+        width: 350px;
+    }
+
+    .text-center {
+        margin: 20px;
+        margin-left: 40px;
+    }
+
+    .text-start {
+        margin: 25px;
+    }
+}
+@media (min-width:320px) {
+    .product-card {
+        background: transparent;
+        height: 540px;
+        margin: 4px;
+        position: relative;
+        left: 4px;
+        width: 290px;
+    }
+
+    .text-center {
+        margin: 20px;
+        margin-left: 40px;
+    }
+
+    .text-start {
+        margin: 25px;
+    }
+}
+
 
 .badge {
     position: absolute;
@@ -111,14 +176,6 @@ h5:hover {
     padding: 4px 10px;
 }
 
-.product-tumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 425px;
-    padding: 10px;
-    background: #670202;
-}
 
 .product-tumb {
     display: flex;
@@ -169,6 +226,10 @@ h5:hover {
     font-weight: 600;
 }
 
+.product-link {
+    text-align: center;
+}
+
 .product-links {
     text-align: right;
 }
@@ -192,4 +253,27 @@ h5:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* comicFav */
+.title-Comic-Fav {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.title-Comic-Fav :hover {
+    color: red;
+}
+
+.border {
+    border-width: 10px;
+}
+
+.fa-heart-circle-minus {
+    color: white;
+}
+
+.fa-heart-circle-minus:hover {
+    color: red;
 }
