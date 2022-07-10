@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useComicID } from '../../Hooks/ComicID/useComicID';
 import { ComicID } from './ComicID';
+
 import Spinner from 'react-bootstrap/Spinner';
 
 export const Comic = () => {
