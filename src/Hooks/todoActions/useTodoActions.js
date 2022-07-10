@@ -21,7 +21,6 @@ export const useTodoActions = () => {
         };
 
         dispatch(action);
-        console.log(action);
     };
 
     const handleTodoRemoved = (todoId) => {
@@ -31,6 +30,5 @@ export const useTodoActions = () => {
         });
 
     };
-    console.log(todoComic);
     return [todoComic, handleTodoAdd, handleTodoRemoved];
 }
