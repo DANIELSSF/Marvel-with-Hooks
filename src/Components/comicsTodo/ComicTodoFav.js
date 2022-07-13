@@ -6,7 +6,7 @@ import { Row } from 'react-bootstrap';
 export const ComicTodoFav = ({ todoComic, handleTodoRemoved }) => {
     return (
         <>
-            <Row xs={0} md={5} className="g-4">
+            <Row xs={2} md={5} className="g-4">
                 {Array.from({ length: 1 }).map((_, idx) => (
 
                     todoComic.map(todoComics => (
