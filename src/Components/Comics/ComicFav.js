@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 
@@ -13,7 +13,6 @@ export const ComicFav = ({ id, handleTodoAdd }) => {
         }
         handleTodoAdd(newComicTodo);
     }
-
     return (
         <>
             <form className='product-link'>
