@@ -143,18 +143,18 @@ h5:hover {
         margin: 25px;
     }
 }
-@media (min-width:320px) {
+@media (min-width:390px) {
     .product-card {
         background: transparent;
         height: 540px;
-        margin: 4px;
+        margin: 3px;
         position: relative;
         left: 4px;
-        width: 290px;
+        width: 350px;
     }
 
     .text-center {
-        margin: 20px;
+        margin: 10px;
         margin-left: 40px;
     }
 
